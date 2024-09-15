@@ -1,0 +1,15 @@
+<project name="CadastroServer" default="compile" basedir=".">
+    <target name="compile">
+        <mkdir dir="build"/> 
+        <javac srcdir="src" destdir="build" includeantruntime="false"/> 
+    </target>
+
+
+    <target name="run" depends="compile">
+        <java classname="com.cadastro.CadastroServer" classpath="build">
+            <classpath>
+                <pathelement path="lib/*"/> 
+            </classpath>
+        </java>
+    </target>
+</project>
